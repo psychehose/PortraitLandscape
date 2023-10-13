@@ -5,6 +5,9 @@
 //  Created by 김호세 on 10/13/23.
 //
 
+//#import "AutoLayoutHelper.h"
+//#import "AutoLayoutHelper.h"
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -21,6 +24,17 @@ class ViewController: UIViewController {
     return btn
   }()
 
+  private lazy var moveButton: UIButton = {
+    let btn = UIButton()
+    btn.setTitle("이동", for: .normal)
+    btn.setTitleColor(.black, for: .normal)
+    btn.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+    btn.backgroundColor = .blue
+    btn.translatesAutoresizingMaskIntoConstraints = false
+
+    btn.addTarget(self, action: #selector(didTapMoveButton), for: .touchUpInside)
+    return btn
+  }()
 
   override var shouldAutorotate: Bool {
      return true
@@ -32,11 +46,21 @@ class ViewController: UIViewController {
     setupViews()
 
   }
+
+  @objc
+  private func didTapMoveButton() {
+    let vc = ObjcViewController()
+    vc.modalPresentationStyle = .fullScreen
+
+    self.present(vc, animated: true)
+
+  }
+
   @objc
   private func didTapButton() {
 
     let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
-    (UIApplication.shared.delegate as! AppDelegate).allList = [.landscapeRight]
+    (UIApplication.shared.delegate as! AppDelegate).allList = .landscapeRight
 
     if #available(iOS 16.0, *) {
       debugPrint("above 16.0")
@@ -54,9 +78,13 @@ class ViewController: UIViewController {
     }
 
   }
+
+
   private func setupViews() {
 
     view.addSubview(button)
+
+    view.addSubview(moveButton)
 
     NSLayoutConstraint.activate([
 
@@ -65,6 +93,15 @@ class ViewController: UIViewController {
 
       button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+
+      moveButton.widthAnchor.constraint(equalToConstant: 80),
+      moveButton.heightAnchor.constraint(equalToConstant: 80),
+
+      moveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      moveButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 100),
+
+
+
 
     ])
 

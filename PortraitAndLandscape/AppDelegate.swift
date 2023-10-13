@@ -10,7 +10,8 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  var allList: UIInterfaceOrientationMask = [.portrait]
+  @objc
+  var allList: UIInterfaceOrientationMask = .portrait
 
   func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
 

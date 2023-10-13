@@ -13,6 +13,7 @@
 		770EAAAC2AD8E7820000A438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770EAAAA2AD8E7820000A438 /* Main.storyboard */; };
 		770EAAAE2AD8E7830000A438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 770EAAAD2AD8E7830000A438 /* Assets.xcassets */; };
 		770EAAB12AD8E7830000A438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770EAAAF2AD8E7830000A438 /* LaunchScreen.storyboard */; };
+		7772512D2AD927E40096B94C /* ObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7772512C2AD927E40096B94C /* ObjcViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		770EAAAD2AD8E7830000A438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		770EAAB02AD8E7830000A438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		770EAAB22AD8E7830000A438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7772512B2AD927E30096B94C /* PortraitAndLandscape-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PortraitAndLandscape-Bridging-Header.h"; sourceTree = "<group>"; };
+		7772512C2AD927E40096B94C /* ObjcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcViewController.m; sourceTree = "<group>"; };
+		7772512E2AD927FF0096B94C /* ObjcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,9 @@
 				770EAAAD2AD8E7830000A438 /* Assets.xcassets */,
 				770EAAAF2AD8E7830000A438 /* LaunchScreen.storyboard */,
 				770EAAB22AD8E7830000A438 /* Info.plist */,
+				7772512C2AD927E40096B94C /* ObjcViewController.m */,
+				7772512B2AD927E30096B94C /* PortraitAndLandscape-Bridging-Header.h */,
+				7772512E2AD927FF0096B94C /* ObjcViewController.h */,
 			);
 			path = PortraitAndLandscape;
 			sourceTree = "<group>";
@@ -99,6 +106,7 @@
 				TargetAttributes = {
 					770EAAA02AD8E7820000A438 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -138,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7772512D2AD927E40096B94C /* ObjcViewController.m in Sources */,
 				770EAAA92AD8E7820000A438 /* ViewController.swift in Sources */,
 				770EAAA52AD8E7820000A438 /* AppDelegate.swift in Sources */,
 				770EAAA72AD8E7820000A438 /* SceneDelegate.swift in Sources */,
@@ -290,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 83LNUYN53Q;
@@ -308,6 +318,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.hose.PortraitAndLandscape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PortraitAndLandscape/PortraitAndLandscape-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 83LNUYN53Q;
@@ -336,6 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.hose.PortraitAndLandscape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PortraitAndLandscape/PortraitAndLandscape-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
